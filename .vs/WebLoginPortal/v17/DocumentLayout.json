@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\models\\passwordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\models\\passwordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\models\\ipasswordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\models\\ipasswordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\helpers\\claimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\helpers\\claimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\models\\passwordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\models\\passwordlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\dto\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +31,8 @@
       "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\dto\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|c:\\users\\oluwayanmife.ayeni\\onedrive - united capital plc\\documents\\asp.net\\webloginportal\\webloginportal\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA1D8B8-0262-4C8E-9E46-2359D726B00F}|WebLoginPortal\\WebLoginPortal.csproj|solutionrelative:webloginportal\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +42,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "ClaimExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Helpers\\ClaimExtensions.cs",
+              "RelativeDocumentMoniker": "WebLoginPortal\\Helpers\\ClaimExtensions.cs",
+              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Helpers\\ClaimExtensions.cs",
+              "RelativeToolTip": "WebLoginPortal\\Helpers\\ClaimExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T11:47:59.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebLoginPortal\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebLoginPortal\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAFEAAAAAzszMzMwowGQAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T11:02:28.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPasswordLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\IPasswordLogic.cs",
+              "RelativeDocumentMoniker": "WebLoginPortal\\Models\\IPasswordLogic.cs",
+              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\IPasswordLogic.cs",
+              "RelativeToolTip": "WebLoginPortal\\Models\\IPasswordLogic.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAADgvwsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T10:54:39.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CreateUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\DTO\\CreateUserDTO.cs",
               "RelativeDocumentMoniker": "WebLoginPortal\\DTO\\CreateUserDTO.cs",
@@ -51,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserInfoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\DTO\\UserInfoDTO.cs",
               "RelativeDocumentMoniker": "WebLoginPortal\\DTO\\UserInfoDTO.cs",
@@ -64,7 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "PasswordLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\PasswordLogic.cs",
+              "RelativeDocumentMoniker": "WebLoginPortal\\Models\\PasswordLogic.cs",
+              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\PasswordLogic.cs",
+              "RelativeToolTip": "WebLoginPortal\\Models\\PasswordLogic.cs",
+              "ViewState": "AQIAAD0AAADAcmZmZmb2v08AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T21:02:57.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "WebLoginPortal\\DTO\\LoginDTO.cs",
@@ -77,41 +141,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Program.cs",
               "RelativeDocumentMoniker": "WebLoginPortal\\Program.cs",
               "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Program.cs",
               "RelativeToolTip": "WebLoginPortal\\Program.cs",
-              "ViewState": "AQIAAAQAAADgamZmZqYowCsAAAAAAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAAA4AAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T11:12:42.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PasswordLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\PasswordLogic.cs",
-              "RelativeDocumentMoniker": "WebLoginPortal\\Models\\PasswordLogic.cs",
-              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Models\\PasswordLogic.cs",
-              "RelativeToolTip": "WebLoginPortal\\Models\\PasswordLogic.cs",
-              "ViewState": "AQIAAA8AAACoZmZmZmYjwA8AAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T21:02:57.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebLoginPortal\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\WebLoginPortal\\WebLoginPortal\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebLoginPortal\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHoAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T15:29:10.625Z",
               "EditorCaption": ""
             }
           ]

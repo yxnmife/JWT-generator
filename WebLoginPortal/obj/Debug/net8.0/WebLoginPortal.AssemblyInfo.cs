@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebLoginPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+378f3a6dbe36762819d5c087aa4165f15d0c611a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e2d66f187e92ed466e69e062c5d45a0d3c9ef58")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebLoginPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebLoginPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

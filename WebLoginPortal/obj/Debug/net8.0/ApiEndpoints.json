@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "WebLoginPortal.Controllers.UsersController",
+    "Method": "ReturnDetails",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebLoginPortal.Controllers.UsersController",
     "Method": "GetById",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "GET",

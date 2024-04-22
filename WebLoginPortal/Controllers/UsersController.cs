@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using WebLoginPortal.Data;
 using WebLoginPortal.DTO;
+using WebLoginPortal.Helpers;
 using WebLoginPortal.Mappers;
 using WebLoginPortal.Models;
 
@@ -31,19 +32,11 @@ namespace WebLoginPortal.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> CreateUser(CreateUserDTO user)
         {
-            var data = new UserInfo();
-            data.Email= user.Email;
-            data.FirstName=user.FirstName;
-            data.LastName = user.LastName;
-         
-            var Userexists= await _db.UsersTable.AnyAsync(c=> c.Email.ToLower()==data.Email.ToLower());//This checks the database to check if an existed user exists with the same email.
-            if (Userexists)
+            var data= await _passwordLogic.CreateUser(user);
+            if (data==null)
             {
-                return BadRequest("Email address already in Database");
+                return BadRequest("Email already exists in database");
             }
-            _passwordLogic.CreateHashPassword(user.Password, out byte[] passwordHash, out byte[] PasswordSalt);
-            data.PasswordHash=passwordHash;
-            data.PasswordSalt = PasswordSalt;
 
            await _db.UsersTable.AddAsync(data);
            await _db.SaveChangesAsync();
@@ -53,21 +46,19 @@ namespace WebLoginPortal.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginDTO logindetails)
         {
-            var email = logindetails.Email.ToLower(); // Convert email to lowercase for comparison
-            var user = await _db.UsersTable.FirstOrDefaultAsync(x => x.Email.ToLower() == email);
+            var user = await _passwordLogic.CheckLoginDetails(logindetails);
 
             if (user == null)
             {
                 return NotFound("User not found in database");
             }
-
-            if (!_passwordLogic.VerifyPassword(logindetails.Password,user.PasswordHash, user.PasswordSalt))
+            var Verify = _passwordLogic.VerifyPassword(logindetails.Password, user.PasswordHash, user.PasswordSalt);
+            if (!Verify)
             {
                 return BadRequest("Wrong Password");
             }
-
-            string token = CreateToken(user);
-            return Ok(token);
+            var Token=_passwordLogic.CreateToken(user);
+            return Ok(Token);
         }
 
 
@@ -87,47 +78,33 @@ namespace WebLoginPortal.Controllers
         [HttpGet("All Users")]
         public async Task<IActionResult> GetAll()
         {
-            var data = await _db.UsersTable.Select(x => x.ToUserInfoDTO()).ToListAsync();
+            var data = await _passwordLogic.GetAllUsers();
             return Ok(data);
         }
         [HttpDelete]
         public async Task<IActionResult>RemoveUser(int id)
         {
-            var user=await _db.UsersTable.FirstOrDefaultAsync(x=>x.Id==id);
+            var user= await _passwordLogic.CheckIDDetails(id);
             if (user == null)
             {
                 return NotFound("User not found");
             }
            _db.UsersTable.Remove(user);
            await _db.SaveChangesAsync();
-            return Ok("User removed successfully");
+            return Ok(user);
 
         }
 
-        private string CreateToken(UserInfo user)
+        [HttpGet]
+        [Authorize]
+        [Route("Display owner of token being used")]
+        public async Task<IActionResult> ReturnDetails()
         {
-          
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-            List<Claim> ClaimsList = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name,user.FirstName),
-                new Claim(ClaimTypes.Name,user.LastName),
-                new Claim(ClaimTypes.Email,user.Email),
-                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
-            };
+            var username = User.GetUsername();
+            var person = await _db.UsersTable.FirstOrDefaultAsync(x => x.FirstName == username);
+            var Details = person.LastName;
 
-            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
-                _config["Jwt:Audience"],
-                claims:ClaimsList,
-                expires: DateTime.Now.AddMinutes(30),
-                signingCredentials: credentials
-                );
-            var jwt= new JwtSecurityTokenHandler().WriteToken(token);
-            return jwt;
+            return Ok("Welcome "+Details+"!");
         }
-
-
-
     }
 }
