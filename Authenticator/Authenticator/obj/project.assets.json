@@ -2896,11 +2896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\Authenticator\\Authenticator\\Authenticator.csproj",
+      "projectUniqueName": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET 6\\Authenticator\\Authenticator\\Authenticator.csproj",
       "projectName": "Authenticator",
-      "projectPath": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\Authenticator\\Authenticator\\Authenticator.csproj",
+      "projectPath": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET 6\\Authenticator\\Authenticator\\Authenticator.csproj",
       "packagesPath": "C:\\Users\\Oluwayanmife.ayeni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET\\Authenticator\\Authenticator\\obj\\",
+      "outputPath": "C:\\Users\\Oluwayanmife.ayeni\\OneDrive - United Capital Plc\\Documents\\ASP.NET 6\\Authenticator\\Authenticator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Oluwayanmife.ayeni\\AppData\\Roaming\\NuGet\\NuGet.Config",

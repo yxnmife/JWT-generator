@@ -1,7 +1,6 @@
 ﻿using Authenticator.Caching;
 using Authenticator.Data;
 using Authenticator.DTO.Stock;
-using Authenticator.Extensions;
 using Authenticator.Interfaces;
 using Authenticator.Mappers;
 using Authenticator.Models;
@@ -43,7 +42,8 @@ namespace Authenticator.Controllers
                 var CacheEntryOptions = new MemoryCacheEntryOptions
                 {
                     AbsoluteExpiration = DateTime.Now.AddMinutes(2),
-                    SlidingExpiration = TimeSpan.FromMinutes(1)
+                    SlidingExpiration = TimeSpan.FromMinutes(1),
+                    Priority=CacheItemPriority.Normal
                 };
                 _cache.Set(CacheKeys.GetStock + id, stocks, CacheEntryOptions);
             }
