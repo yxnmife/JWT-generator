@@ -1,0 +1,1168 @@
+2024-05-22 12:17:12.742 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 12:17:13.703 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 12:17:13.704 +01:00  INF  Hosting environment: Development
+2024-05-22 12:17:13.704 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 12:17:13.823 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 12:17:14.989 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 12:17:14.992 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 1174.0372ms
+2024-05-22 12:17:15.003 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 13.3053ms
+2024-05-22 12:17:15.313 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 12:17:15.462 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 149.1375ms
+2024-05-22 12:17:15.798 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 12:17:16.092 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 294.4987ms
+2024-05-22 12:17:46.541 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 12:17:47.106 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:17:47.164 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 12:17:48.970 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:17:48.970 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:17:49.220 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:17:52.215 +01:00  INF  Executed DbCommand (277ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[EmailAddress], [a].[PasswordHash], [a].[PasswordSalt], [a].[Username]
+FROM [AccountsTable] AS [a]
+WHERE LOWER([a].[Username]) = @__ToLower_0
+2024-05-22 12:17:53.032 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:17:53.044 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 5871.1779ms
+2024-05-22 12:17:53.046 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:17:53.053 +01:00  INF  HTTP POST /api/Account/Login responded 200 in 6482.9086 ms
+2024-05-22 12:17:53.074 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 200 - application/json;+charset=utf-8 6531.8863ms
+2024-05-22 12:18:13.905 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:18:14.086 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:14.089 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:14.099 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:18:14.180 +01:00  INF  Executed DbCommand (21ms) [Parameters=[@__AccountId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[AccountId], [p].[StockId]
+FROM [Porttfolios] AS [p]
+WHERE [p].[AccountId] = @__AccountId_0
+2024-05-22 12:18:14.193 +01:00  ERR  5/22/2024 12:18:14 PM: User Portfolio Not found
+2024-05-22 12:18:14.194 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:18:14.195 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 105.713ms
+2024-05-22 12:18:14.195 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:14.195 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 404 in 288.6725 ms
+2024-05-22 12:18:14.196 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 404 - application/json;+charset=utf-8 291.0046ms
+2024-05-22 12:18:22.213 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:18:22.219 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:22.219 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:22.285 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:18:22.296 +01:00  INF  Executed DbCommand (4ms) [Parameters=[@__AccountId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[AccountId], [p].[StockId]
+FROM [Porttfolios] AS [p]
+WHERE [p].[AccountId] = @__AccountId_0
+2024-05-22 12:18:22.296 +01:00  ERR  5/22/2024 12:18:22 PM: User Portfolio Not found
+2024-05-22 12:18:22.296 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:18:22.297 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 77.9464ms
+2024-05-22 12:18:22.297 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:22.297 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 404 in 82.3355 ms
+2024-05-22 12:18:22.297 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 404 - application/json;+charset=utf-8 84.2312ms
+2024-05-22 12:18:29.444 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0
+2024-05-22 12:18:29.445 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:18:29.452 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:29.468 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:18:29.484 +01:00  INF  Executed DbCommand (9ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:18:29.518 +01:00  INF  5/22/2024 12:18:29 PM: Portfolio created successfully
+2024-05-22 12:18:29.852 +01:00  INF  Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Porttfolios] ([AccountId], [StockId])
+VALUES (@p0, @p1);
+2024-05-22 12:18:29.903 +01:00  INF  Executing ObjectResult, writing value of type 'Authenticator.DTO.Portfolio.PortfolioDTO'.
+2024-05-22 12:18:29.905 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 452.7564ms
+2024-05-22 12:18:29.905 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:18:29.906 +01:00  INF  HTTP POST /api/Portfolios/Create Portfolio responded 200 in 462.1003 ms
+2024-05-22 12:18:29.907 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0 - 200 - application/json;+charset=utf-8 462.5976ms
+2024-05-22 12:18:33.511 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:18:33.511 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:33.511 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:33.512 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:18:33.515 +01:00  INF  Executed DbCommand (3ms) [Parameters=[@__AccountId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[AccountId], [p].[StockId]
+FROM [Porttfolios] AS [p]
+WHERE [p].[AccountId] = @__AccountId_0
+2024-05-22 12:18:33.519 +01:00  INF  5/22/2024 12:18:33 PM: User Portfolio Returned
+2024-05-22 12:18:33.519 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:18:33.520 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 8.4189ms
+2024-05-22 12:18:33.520 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:33.520 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 9.1520 ms
+2024-05-22 12:18:33.520 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 9.7060ms
+2024-05-22 12:18:42.519 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0
+2024-05-22 12:18:42.520 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:18:42.520 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:42.520 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:18:42.553 +01:00  INF  Executed DbCommand (33ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:18:42.554 +01:00  INF  5/22/2024 12:18:42 PM: Portfolio created successfully
+2024-05-22 12:18:42.587 +01:00  INF  Executed DbCommand (31ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Porttfolios] ([AccountId], [StockId])
+VALUES (@p0, @p1);
+2024-05-22 12:18:42.600 +01:00  INF  Executing ObjectResult, writing value of type 'Authenticator.DTO.Portfolio.PortfolioDTO'.
+2024-05-22 12:18:42.600 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 80.5478ms
+2024-05-22 12:18:42.600 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:18:42.601 +01:00  INF  HTTP POST /api/Portfolios/Create Portfolio responded 200 in 81.1210 ms
+2024-05-22 12:18:42.601 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0 - 200 - application/json;+charset=utf-8 81.4729ms
+2024-05-22 12:18:48.214 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:18:48.215 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:48.215 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:48.216 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:18:48.219 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 3.2868ms
+2024-05-22 12:18:48.219 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:48.219 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 4.5764 ms
+2024-05-22 12:18:48.219 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 5.1805ms
+2024-05-22 12:18:51.363 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:18:51.363 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:51.364 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:18:51.364 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:18:51.365 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 0.912ms
+2024-05-22 12:18:51.365 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:18:51.365 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 1.9420 ms
+2024-05-22 12:18:51.365 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 2.3521ms
+2024-05-22 12:19:00.215 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:19:00.216 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:00.216 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:19:00.217 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:19:00.217 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 1.0059ms
+2024-05-22 12:19:00.217 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:00.218 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 1.8933 ms
+2024-05-22 12:19:00.218 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 2.3943ms
+2024-05-22 12:19:01.110 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:19:01.111 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:01.111 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:19:01.111 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:19:01.111 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 0.5148ms
+2024-05-22 12:19:01.111 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:01.111 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 0.9890 ms
+2024-05-22 12:19:01.112 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 1.2771ms
+2024-05-22 12:19:06.591 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:19:06.591 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:06.591 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:19:06.591 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:19:06.592 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 0.4578ms
+2024-05-22 12:19:06.592 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:06.592 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 0.9474 ms
+2024-05-22 12:19:06.592 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 1.2121ms
+2024-05-22 12:19:19.146 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0
+2024-05-22 12:19:19.147 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:19:19.147 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:19:19.148 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:19:19.153 +01:00  INF  Executed DbCommand (4ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:19:19.153 +01:00  INF  5/22/2024 12:19:19 PM: Portfolio created successfully
+2024-05-22 12:19:19.177 +01:00  ERR  Failed executing DbCommand (20ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Porttfolios] ([AccountId], [StockId])
+VALUES (@p0, @p1);
+2024-05-22 12:19:19.381 +01:00  ERR  An exception occurred in the database while saving changes for context type 'Authenticator.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3be8aa9e-606e-4266-be45-bba908161e36
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3be8aa9e-606e-4266-be45-bba908161e36
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+
+2024-05-22 12:19:19.597 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 450.2015ms
+2024-05-22 12:19:19.599 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:19:19.600 +01:00  ERR  HTTP POST /api/Portfolios/Create Portfolio responded 500 in 453.3629 msMicrosoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3be8aa9e-606e-4266-be45-bba908161e36
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 82
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+2024-05-22 12:19:19.625 +01:00  ERR  An unhandled exception has occurred while executing the request.Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3be8aa9e-606e-4266-be45-bba908161e36
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 82
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2024-05-22 12:19:19.641 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0 - 500 - text/plain;+charset=utf-8 494.3182ms
+2024-05-22 12:19:30.251 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - -
+2024-05-22 12:19:30.252 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:30.252 +01:00  INF  Route matched with {action = "GetPortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPortfolio() on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:19:30.252 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Authenticator.DTO.Portfolio.PortfolioDTO, Authenticator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-22 12:19:30.252 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator) in 0.6414ms
+2024-05-22 12:19:30.253 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.GetPortfolio (Authenticator)'
+2024-05-22 12:19:30.253 +01:00  INF  HTTP GET /api/Portfolios/Get user portfolio responded 200 in 1.3194 ms
+2024-05-22 12:19:30.253 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/api/Portfolios/Get user portfolio - - - 200 - application/json;+charset=utf-8 1.7646ms
+2024-05-22 12:25:41.647 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 12:25:42.436 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 12:25:42.477 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 12:25:42.477 +01:00  INF  Hosting environment: Development
+2024-05-22 12:25:42.478 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 12:25:43.705 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 1272.0096ms
+2024-05-22 12:25:44.331 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 12:25:44.348 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 16.0463ms
+2024-05-22 12:25:45.173 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 12:25:45.332 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 158.9080ms
+2024-05-22 12:25:45.665 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 12:25:46.220 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 554.3893ms
+2024-05-22 12:26:08.160 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0
+2024-05-22 12:26:08.441 +01:00  INF  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-22 12:26:08.452 +01:00  INF  AuthenticationScheme: Bearer was challenged.
+2024-05-22 12:26:08.456 +01:00  INF  HTTP POST /api/Portfolios/Create Portfolio responded 401 in 264.2965 ms
+2024-05-22 12:26:08.460 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0 - 401 - - 299.6051ms
+2024-05-22 12:26:32.219 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 12:26:32.239 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:26:32.299 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 12:26:33.874 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:26:33.874 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:26:34.149 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:26:36.451 +01:00  INF  Executed DbCommand (220ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[EmailAddress], [a].[PasswordHash], [a].[PasswordSalt], [a].[Username]
+FROM [AccountsTable] AS [a]
+WHERE LOWER([a].[Username]) = @__ToLower_0
+2024-05-22 12:26:36.889 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:26:36.899 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 4593.1147ms
+2024-05-22 12:26:36.901 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:26:36.903 +01:00  INF  HTTP POST /api/Account/Login responded 200 in 4681.9700 ms
+2024-05-22 12:26:36.917 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 200 - application/json;+charset=utf-8 4697.5469ms
+2024-05-22 12:26:51.143 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0
+2024-05-22 12:26:51.270 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:26:51.274 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:26:51.329 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:26:51.359 +01:00  INF  Executed DbCommand (22ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:26:51.381 +01:00  ERR  5/22/2024 12:26:51 PM: Failed to create Portfolio
+2024-05-22 12:26:51.382 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:26:51.382 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 107.5979ms
+2024-05-22 12:26:51.382 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:26:51.384 +01:00  INF  HTTP POST /api/Portfolios/Create Portfolio responded 400 in 237.7948 ms
+2024-05-22 12:26:51.384 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0 - 400 - application/json;+charset=utf-8 241.2539ms
+2024-05-22 12:26:54.795 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0
+2024-05-22 12:26:54.798 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:26:54.798 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:26:54.873 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:26:55.041 +01:00  INF  Executed DbCommand (163ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:26:55.041 +01:00  ERR  5/22/2024 12:26:55 PM: Failed to create Portfolio
+2024-05-22 12:26:55.041 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:26:55.042 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 243.0149ms
+2024-05-22 12:26:55.042 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:26:55.042 +01:00  INF  HTTP POST /api/Portfolios/Create Portfolio responded 400 in 245.8740 ms
+2024-05-22 12:26:55.042 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=100 - 0 - 400 - application/json;+charset=utf-8 246.5461ms
+2024-05-22 12:34:48.553 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 12:34:49.441 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 12:34:49.545 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 12:34:49.546 +01:00  INF  Hosting environment: Development
+2024-05-22 12:34:49.547 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 12:34:50.638 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 1204.1973ms
+2024-05-22 12:34:51.318 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 12:34:51.331 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 12.2676ms
+2024-05-22 12:34:53.138 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 12:34:53.321 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 182.2602ms
+2024-05-22 12:34:53.561 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 12:34:53.891 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 329.7677ms
+2024-05-22 12:35:52.982 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 12:35:53.228 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:35:53.292 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 12:35:54.904 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:35:54.905 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:35:55.206 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:35:57.710 +01:00  INF  Executed DbCommand (289ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[EmailAddress], [a].[PasswordHash], [a].[PasswordSalt], [a].[Username]
+FROM [AccountsTable] AS [a]
+WHERE LOWER([a].[Username]) = @__ToLower_0
+2024-05-22 12:35:58.166 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:35:58.180 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 4879.4478ms
+2024-05-22 12:35:58.183 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:35:58.193 +01:00  INF  HTTP POST /api/Account/Login responded 200 in 5178.3051 ms
+2024-05-22 12:35:58.222 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 200 - application/json;+charset=utf-8 5239.2234ms
+2024-05-22 12:36:18.290 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0
+2024-05-22 12:36:18.492 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:36:18.500 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:36:18.523 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:36:18.555 +01:00  INF  Executed DbCommand (22ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:36:18.651 +01:00  INF  Executed DbCommand (10ms) [Parameters=[@__ToInt32_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Porttfolios] AS [p]
+        WHERE [p].[StockId] = @__ToInt32_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 12:36:18.676 +01:00  INF  5/22/2024 12:36:18 PM: Portfolio created successfully
+2024-05-22 12:36:19.011 +01:00  ERR  Failed executing DbCommand (43ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Porttfolios] ([AccountId], [StockId])
+VALUES (@p0, @p1);
+2024-05-22 12:36:19.160 +01:00  ERR  An exception occurred in the database while saving changes for context type 'Authenticator.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 1).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 1).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+
+2024-05-22 12:36:19.449 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 948.4657ms
+2024-05-22 12:36:19.451 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:36:19.457 +01:00  ERR  HTTP POST /api/Portfolios/Create Portfolio responded 500 in 1164.6041 msMicrosoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 1).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 99
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+2024-05-22 12:36:19.506 +01:00  ERR  An unhandled exception has occurred while executing the request.Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 1).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 99
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2024-05-22 12:36:19.533 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0 - 500 - text/plain;+charset=utf-8 1242.4697ms
+2024-05-22 12:36:36.534 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0
+2024-05-22 12:36:36.543 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:36:36.543 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:36:36.636 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:36:36.660 +01:00  INF  Executed DbCommand (17ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CompanyName], [s].[Div], [s].[Industry], [s].[MarketCap], [s].[Purchase], [s].[Symbol]
+FROM [StockTable] AS [s]
+WHERE [s].[Id] = @__StockId_0
+2024-05-22 12:36:36.676 +01:00  INF  Executed DbCommand (14ms) [Parameters=[@__ToInt32_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Porttfolios] AS [p]
+        WHERE [p].[StockId] = @__ToInt32_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 12:36:36.676 +01:00  INF  5/22/2024 12:36:36 PM: Portfolio created successfully
+2024-05-22 12:36:36.690 +01:00  ERR  Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Porttfolios] ([AccountId], [StockId])
+VALUES (@p0, @p1);
+2024-05-22 12:36:36.694 +01:00  ERR  An exception occurred in the database while saving changes for context type 'Authenticator.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+
+2024-05-22 12:36:36.861 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 317.9818ms
+2024-05-22 12:36:36.862 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:36:36.862 +01:00  ERR  HTTP POST /api/Portfolios/Create Portfolio responded 500 in 324.5988 msMicrosoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 99
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+2024-05-22 12:36:36.867 +01:00  ERR  An unhandled exception has occurred while executing the request.Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Porttfolios'. Cannot insert duplicate key in object 'dbo.Porttfolios'. The duplicate key value is (7, 2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2dcac964-050d-474d-b6e5-d6a372a544db
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authenticator.Repository.Port.PortfolioRepo.PortfolioCreationValidation(Portfolio portFolio, String Id) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 99
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2024-05-22 12:36:36.878 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=2 - 0 - 500 - text/plain;+charset=utf-8 343.8519ms
+2024-05-22 12:42:37.502 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 12:42:38.091 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 12:42:38.163 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 12:42:38.164 +01:00  INF  Hosting environment: Development
+2024-05-22 12:42:38.167 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 12:42:39.065 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 982.5635ms
+2024-05-22 12:42:39.075 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 12:42:39.109 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 32.8600ms
+2024-05-22 12:42:39.357 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 12:42:39.508 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.4297ms
+2024-05-22 12:42:39.900 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 12:42:40.200 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.6163ms
+2024-05-22 12:43:02.653 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 12:43:02.913 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:43:02.966 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 12:43:04.697 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:43:04.698 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 12:43:05.017 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:43:17.065 +01:00  INF  Executed DbCommand (10,138ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[EmailAddress], [a].[PasswordHash], [a].[PasswordSalt], [a].[Username]
+FROM [AccountsTable] AS [a]
+WHERE LOWER([a].[Username]) = @__ToLower_0
+2024-05-22 12:43:17.490 +01:00  INF  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-22 12:43:17.500 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 14527.4878ms
+2024-05-22 12:43:17.502 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 12:43:17.508 +01:00  INF  HTTP POST /api/Account/Login responded 200 in 14829.7054 ms
+2024-05-22 12:43:17.530 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 200 - application/json;+charset=utf-8 14877.5708ms
+2024-05-22 12:43:39.272 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0
+2024-05-22 12:43:39.436 +01:00  INF  Executing endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:43:39.441 +01:00  INF  Route matched with {action = "CreatePortfolio", controller = "Portfolios"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePortfolio(Int32) on controller Authenticator.Controllers.PortfoliosController (Authenticator).
+2024-05-22 12:43:39.457 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 12:43:56.742 +01:00  INF  Executed DbCommand (17,229ms) [Parameters=[@__StockId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Porttfolios] AS [p]
+        WHERE [p].[StockId] = @__StockId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-05-22 12:43:56.907 +01:00  INF  Executed action Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator) in 17466.0596ms
+2024-05-22 12:43:56.908 +01:00  INF  Executed endpoint 'Authenticator.Controllers.PortfoliosController.CreatePortfolio (Authenticator)'
+2024-05-22 12:43:56.909 +01:00  ERR  HTTP POST /api/Portfolios/Create Portfolio responded 500 in 17635.2822 msSystem.InvalidOperationException: Portfolio already exists for the given StockId.
+   at Authenticator.Repository.Port.PortfolioRepo.CreatePortfolio(Int32 StockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 35
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+2024-05-22 12:43:57.011 +01:00  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: Portfolio already exists for the given StockId.
+   at Authenticator.Repository.Port.PortfolioRepo.CreatePortfolio(Int32 StockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Port\PortfolioRepo.cs:line 35
+   at Authenticator.Controllers.PortfoliosController.CreatePortfolio(Int32 stockId) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\PortfoliosController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2024-05-22 12:43:57.024 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Portfolios/Create Portfolio?stockId=1 - 0 - 500 - text/plain;+charset=utf-8 17751.8931ms
+2024-05-22 14:26:27.413 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 14:26:28.097 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 14:26:28.144 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 14:26:28.145 +01:00  INF  Hosting environment: Development
+2024-05-22 14:26:28.145 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 14:26:29.296 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 1206.3949ms
+2024-05-22 14:26:29.429 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 14:26:29.446 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 13.0426ms
+2024-05-22 14:26:30.342 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 14:26:30.509 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 167.1379ms
+2024-05-22 14:26:30.801 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 14:26:31.158 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 356.5934ms
+2024-05-22 14:27:25.224 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 14:27:25.514 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 14:27:25.567 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 14:27:27.091 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 14:27:27.092 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 14:27:27.360 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 14:27:44.047 +01:00  ERR  An error occurred using the connection to database 'AuthenticationDb' on server 'UCAP-IT-40\TESTSERVER'.
+2024-05-22 14:27:44.251 +01:00  ERR  An exception occurred while iterating over the results of a query for context type 'Authenticator.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=209; handshake=14798; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:78589b70-9b33-4b23-aa2d-c8af4aa1cfde
+Error Number:-2,State:0,Class:11Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=209; handshake=14798; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:78589b70-9b33-4b23-aa2d-c8af4aa1cfde
+Error Number:-2,State:0,Class:11
+
+2024-05-22 14:27:44.752 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 19166.3107ms
+2024-05-22 14:27:44.765 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 14:27:44.782 +01:00  ERR  HTTP POST /api/Account/Login responded 500 in 19498.9055 msMicrosoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=209; handshake=14798; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Authenticator.Repository.Account.AccountRepo.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Account\AccountRepo.cs:line 68
+   at Authenticator.Controllers.AccountController.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\AccountController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:78589b70-9b33-4b23-aa2d-c8af4aa1cfde
+Error Number:-2,State:0,Class:11
+
+2024-05-22 14:27:44.895 +01:00  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=209; handshake=14798; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Authenticator.Repository.Account.AccountRepo.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Account\AccountRepo.cs:line 68
+   at Authenticator.Controllers.AccountController.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\AccountController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:78589b70-9b33-4b23-aa2d-c8af4aa1cfde
+Error Number:-2,State:0,Class:11
+
+2024-05-22 14:27:45.003 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 500 - text/plain;+charset=utf-8 19778.2234ms
+2024-05-22 17:36:14.510 +01:00  INF  User profile is available. Using 'C:\Users\Oluwayanmife.ayeni\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-22 17:36:15.099 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - -
+2024-05-22 17:36:15.138 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-05-22 17:36:15.138 +01:00  INF  Hosting environment: Development
+2024-05-22 17:36:15.139 +01:00  INF  Content root path: C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\
+2024-05-22 17:36:15.783 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - - - 200 - text/html;charset=utf-8 687.5930ms
+2024-05-22 17:36:15.867 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2024-05-22 17:36:15.892 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 14.0376ms
+2024-05-22 17:36:16.061 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2024-05-22 17:36:16.186 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 124.4073ms
+2024-05-22 17:36:16.923 +01:00  INF  Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - -
+2024-05-22 17:36:17.503 +01:00  INF  Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 580.0323ms
+2024-05-22 17:36:41.405 +01:00  INF  Request starting HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52
+2024-05-22 17:36:41.708 +01:00  INF  Executing endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 17:36:41.754 +01:00  INF  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Authenticator.DTO.Account.LoginDTO) on controller Authenticator.Controllers.AccountController (Authenticator).
+2024-05-22 17:36:43.370 +01:00  WRN  No store type was specified for the decimal property 'Div' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 17:36:43.371 +01:00  WRN  No store type was specified for the decimal property 'Purchase' on entity type 'Stocks'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-05-22 17:36:43.604 +01:00  INF  Entity Framework Core 6.0.29 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-05-22 17:36:59.352 +01:00  ERR  An error occurred using the connection to database 'AuthenticationDb' on server 'UCAP-IT-40\TESTSERVER'.
+2024-05-22 17:36:59.454 +01:00  ERR  An exception occurred while iterating over the results of a query for context type 'Authenticator.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=200; handshake=55; [Login] initialization=9; authentication=65; [Post-Login] complete=14032; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6a9a3812-af15-49ef-9d7d-bb8446c223d6
+Error Number:-2,State:0,Class:11Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=200; handshake=55; [Login] initialization=9; authentication=65; [Post-Login] complete=14032; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6a9a3812-af15-49ef-9d7d-bb8446c223d6
+Error Number:-2,State:0,Class:11
+
+2024-05-22 17:36:59.691 +01:00  INF  Executed action Authenticator.Controllers.AccountController.Login (Authenticator) in 17930.6288ms
+2024-05-22 17:36:59.696 +01:00  INF  Executed endpoint 'Authenticator.Controllers.AccountController.Login (Authenticator)'
+2024-05-22 17:36:59.710 +01:00  ERR  HTTP POST /api/Account/Login responded 500 in 18271.5539 msMicrosoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=200; handshake=55; [Login] initialization=9; authentication=65; [Post-Login] complete=14032; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Authenticator.Repository.Account.AccountRepo.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Account\AccountRepo.cs:line 68
+   at Authenticator.Controllers.AccountController.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\AccountController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:6a9a3812-af15-49ef-9d7d-bb8446c223d6
+Error Number:-2,State:0,Class:11
+
+2024-05-22 17:36:59.754 +01:00  ERR  An unhandled exception has occurred while executing the request.Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=200; handshake=55; [Login] initialization=9; authentication=65; [Post-Login] complete=14032; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Authenticator.Repository.Account.AccountRepo.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Repository\Account\AccountRepo.cs:line 68
+   at Authenticator.Controllers.AccountController.Login(LoginDTO login) in C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\Authenticator\Authenticator\Controllers\AccountController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:6a9a3812-af15-49ef-9d7d-bb8446c223d6
+Error Number:-2,State:0,Class:11
+
+2024-05-22 17:36:59.795 +01:00  INF  Request finished HTTP/2 POST https://localhost:44318/api/Account/Login application/json 52 - 500 - text/plain;+charset=utf-8 18389.9996ms
