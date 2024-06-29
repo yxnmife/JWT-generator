@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1qNvATRCTZGS+UHOiOcYC72LGJXORjpTht2uEhbTEE8=",
+  "Source": "CleanAuthenticator.Api",
+  "BasePath": "_content/CleanAuthenticator.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

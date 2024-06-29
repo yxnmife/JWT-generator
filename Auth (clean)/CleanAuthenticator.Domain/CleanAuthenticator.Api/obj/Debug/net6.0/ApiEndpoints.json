@@ -1,0 +1,245 @@
+[
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "CHangePassword",
+    "RelativePath": "api/Account/Change account Password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "change",
+        "Type": "CleanAuthenticator.Application.DTOs.Account.ChangePasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "CreateAccountAsync",
+    "RelativePath": "api/Account/Create an Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "create",
+        "Type": "CleanAuthenticator.Application.DTOs.Account.CreateAccountDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "DeleteAccount",
+    "RelativePath": "api/Account/Delete user account",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "CleanAuthenticator.Application.DTOs.Account.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "AllAccounts",
+    "RelativePath": "api/Account/Get All Accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "GetById",
+    "RelativePath": "api/Account/GetAccountById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "AccountLogin",
+    "RelativePath": "api/Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "CleanAuthenticator.Application.DTOs.Account.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Account/Reset account password",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.PortfolioController",
+    "Method": "Create",
+    "RelativePath": "api/Portfolio/Create Portfolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StockId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.PortfolioController",
+    "Method": "GetPortfolio",
+    "RelativePath": "api/Portfolio/Get all user Portfolios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.PortfolioController",
+    "Method": "RemoveStock",
+    "RelativePath": "api/Portfolio/Remove stock from User Portfolio",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StockID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "CreateStock",
+    "RelativePath": "api/Stock/Create Stock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "create",
+        "Type": "CleanAuthenticator.Application.DTOs.Stock.CreateStockDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "DeleteStock",
+    "RelativePath": "api/Stock/Delete stock",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "GetAllStocks",
+    "RelativePath": "api/Stock/Get all Stocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "GetById",
+    "RelativePath": "api/Stock/Get stock by {id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "Search",
+    "RelativePath": "api/Stock/Search Stock using companyName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CompanyName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanAuthenticator.Api.Controllers.StockController",
+    "Method": "UpdateStockInformation",
+    "RelativePath": "api/Stock/Update Stock Using StockId",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StockId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "update",
+        "Type": "CleanAuthenticator.Application.DTOs.Stock.UpdateStockDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

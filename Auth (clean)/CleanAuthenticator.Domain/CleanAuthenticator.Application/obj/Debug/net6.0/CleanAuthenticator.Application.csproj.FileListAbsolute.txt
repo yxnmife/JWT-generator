@@ -1,0 +1,16 @@
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\bin\Debug\net6.0\CleanAuthenticator.Application.deps.json
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\bin\Debug\net6.0\CleanAuthenticator.Application.dll
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\bin\Debug\net6.0\CleanAuthenticator.Application.pdb
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\bin\Debug\net6.0\CleanAuthenticator.Domain.dll
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\bin\Debug\net6.0\CleanAuthenticator.Domain.pdb
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.csproj.AssemblyReference.cache
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.AssemblyInfoInputs.cache
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.AssemblyInfo.cs
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.csproj.CoreCompileInputs.cache
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.sourcelink.json
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAut.E5BF86EA.Up2Date
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.dll
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\refint\CleanAuthenticator.Application.dll
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\CleanAuthenticator.Application.pdb
+C:\Users\Oluwayanmife.ayeni\OneDrive - United Capital Plc\Documents\ASP.NET\CleanAuthenticator.Domain\CleanAuthenticator.Application\obj\Debug\net6.0\ref\CleanAuthenticator.Application.dll
